@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\sistema-marcacao-consultas.props" />
+</Project>

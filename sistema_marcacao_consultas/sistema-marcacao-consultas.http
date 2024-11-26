@@ -1,0 +1,6 @@
+@sistema_marcacao_consultas_HostAddress = http://localhost:5229
+
+GET {{sistema_marcacao_consultas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

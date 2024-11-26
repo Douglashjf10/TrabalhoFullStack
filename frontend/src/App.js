@@ -1,19 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './components/Login';
-import Register from './components/Register';
-import TaskList from './components/TaskList';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Consultas from "./pages/Consultas";
+import AdminConsultas from "./pages/AdminConsultas";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-function App() {
-    return (
-        <Router>
-            <Switch>
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <Route path="/tasks" component={TaskList} />
-            </Switch>
-        </Router>
-    );
-}
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/consultas" element={<Consultas />} />
+          <Route path="/login" element={<Login />} />
+        <Route path="/admin/consultas" element={<AdminConsultas />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
